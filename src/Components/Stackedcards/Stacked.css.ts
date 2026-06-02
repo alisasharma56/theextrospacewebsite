@@ -43,19 +43,28 @@
 // export const layerOpacities = [1, 0.7, 0.48, 0.3] as const;
 
 import { style } from '@vanilla-extract/css';
+import { screens } from '../../styles/breakpoints.css.ts';
 
 export const stackContainer = style({
     position:       'relative',
     width:          '275px',
     height:         '420px',
     margin:         '0 auto',
-    // Pull the stack up so it sits closer to the header
     marginTop:      '-120px',
     display:        'flex',
     alignItems:     'center',
     justifyContent: 'center',
     transformStyle: 'preserve-3d',
     transform:      'perspective(2200px) rotateX(72deg) rotateZ(-36deg)',
+
+    '@media': {
+        [screens.belowTablet]: {
+            transform:  'perspective(1400px) rotateX(65deg) rotateZ(-30deg)',
+            marginTop:  '-60px',
+            width:      '220px',
+            height:     '340px',
+        },
+    },
 });
 
 export const stackCard = style({
@@ -73,6 +82,10 @@ export const stackCard = style({
     padding:              '24px',
     overflow:             'hidden',
     transformStyle:       'preserve-3d',
+
+    '@media': {
+        [screens.belowTablet]: { width: '220px', height: '293px' },
+    },
 });
 
 export const stackCardLabel = style({
@@ -86,6 +99,10 @@ export const stackCardLabel = style({
     color:         'rgba(255,255,255,0.90)',
     position:      'relative',
     zIndex:         2,
+
+    '@media': {
+        [screens.belowTablet]: { fontSize: '28px' },
+    },
 });
 
 export const layerOpacities = [1, 0.72, 0.5, 0.3] as const;

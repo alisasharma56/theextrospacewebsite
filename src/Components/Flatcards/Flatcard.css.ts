@@ -1,7 +1,7 @@
 import { style } from '@vanilla-extract/css';
 import { vars } from '../../styles/theme.css.ts';
+import { screens } from '../../styles/breakpoints.css.ts';
 
-// Exact Figma container CSS
 export const flatGrid = style({
     display:        'flex',
     width:          '100%',
@@ -14,15 +14,11 @@ export const flatGrid = style({
     margin:         '0 auto',
 
     '@media': {
-        '(max-width: 900px)': {
-            flexWrap:  'wrap',
-            height:    'auto',
-            padding:   '60px 20px',
-        },
+        [screens.belowLaptop]: { gap: '16px', padding: '80px 20px', height: 'auto' },
+        [screens.belowTablet]: { flexWrap: 'wrap', padding: '48px 20px', gap: '16px', height: 'auto' },
     },
 });
 
-// Exact Figma card CSS
 export const flatCard = style({
     position:             'relative',
     width:                '275px',
@@ -38,7 +34,11 @@ export const flatCard = style({
     WebkitBackdropFilter: 'blur(4px)',
     overflow:             'hidden',
     cursor:               'pointer',
-    // NO border
+
+    '@media': {
+        [screens.belowLaptop]: { width: '220px', height: '293px' },
+        [screens.belowTablet]: { width: '45vw',  height: '260px' },
+    },
 });
 
 export const flatCardTitle = style({
@@ -52,6 +52,11 @@ export const flatCardTitle = style({
     color:         'rgba(255,255,255,0.90)',
     textAlign:     'center',
     margin:         0,
+
+    '@media': {
+        [screens.belowLaptop]: { fontSize: '28px' },
+        [screens.belowTablet]: { fontSize: '22px' },
+    },
 });
 
 export const flatCardDescription = style({
@@ -62,4 +67,8 @@ export const flatCardDescription = style({
     maxWidth:   '220px',
     textAlign:  'center',
     margin:      0,
+
+    '@media': {
+        [screens.belowTablet]: { fontSize: '12px' },
+    },
 });
