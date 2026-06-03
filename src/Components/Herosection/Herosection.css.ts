@@ -1,4 +1,3 @@
-
 import { style, globalStyle, keyframes } from '@vanilla-extract/css';
 import { vars } from '../../styles/theme.css.ts';
 
@@ -19,6 +18,18 @@ const fadeUp = keyframes({
     to:   { opacity: 1, transform: 'translateY(0)' },
 });
 
+// export const heroWrapper = style({
+//     position:      'relative',
+//     width:         '100%',
+//     maxWidth:      '1366px',
+//     height:        '1073px',
+//     margin:        '0 auto',
+//     display:       'flex',
+//     flexDirection: 'column',
+//     alignItems:    'center',
+//     overflow:      'hidden',
+//     background:     vars.color.bg,
+// });
 export const heroWrapper = style({
     position:      'relative',
     width:         '100%',
@@ -29,7 +40,23 @@ export const heroWrapper = style({
     flexDirection: 'column',
     alignItems:    'center',
     overflow:      'hidden',
-    background:     vars.color.bg,
+    background:    vars.color.bg,
+
+    '@media': {
+        'screen and (max-width: 1280px)': {
+            height: '900px',
+        },
+        'screen and (max-width: 1024px)': {
+            height: '800px',
+        },
+        'screen and (max-width: 768px)': {
+            height: '100svh',
+        },
+        'screen and (max-width: 480px)': {
+            height: '100svh',
+            minHeight: '600px',
+        },
+    },
 });
 
 export const headerBlock = style({
