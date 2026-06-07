@@ -80,8 +80,8 @@ export const gridWrapper = style({
     '@media': {
         'screen and (max-width: 1280px)': {
             bottom: -320,
-            left: -80,
-            right: 30,
+            left: -20,
+            right: 60,
             height: '70%',
         },
         'screen and (max-width: 1024px)': {
