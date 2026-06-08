@@ -237,7 +237,7 @@ export const MorphingCards: React.FC = () => {
             const fanTimer = setTimeout(() => {
                 setStage('fan');
                 setTimeout(() => setSpreading(false), 4300 + CARDS.length * 80);
-            }, 3800);
+            }, 2000);
             return () => clearTimeout(fanTimer);
         }, 800);
         return () => clearTimeout(startTimer);
@@ -311,7 +311,7 @@ export const MorphingCards: React.FC = () => {
                                         }
                                         transition={stage === 'collapsing'
                                             ? i === 0
-                                                ? { duration: 5.5, ease: EASE }
+                                                ? { duration: 3.8, ease: EASE }
                                                 : { duration: 1.2, ease: FAST_EASE_OUT }
                                             : { duration: 4.3, delay: i * 0.08, ease: EASE }
                                         }
