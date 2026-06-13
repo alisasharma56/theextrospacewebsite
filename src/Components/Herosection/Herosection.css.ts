@@ -301,7 +301,7 @@ export const cardsArea = style({
     display:        'flex',
     alignItems:     'center',
     justifyContent: 'center',
-    paddingTop:     '20px',
+    paddingTop:     '150px',
     paddingBottom:  '160px',
     overflow:       'visible',
 

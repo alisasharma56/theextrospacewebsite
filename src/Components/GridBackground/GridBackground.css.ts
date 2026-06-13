@@ -14,7 +14,7 @@ export const gridWrapper = style({
     '@media': {
         'screen and (max-width: 1280px)': {
             bottom: -320,
-            left: -200,
+            left: -210,
             right: 40,
             height: '75%',
         },
