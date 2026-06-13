@@ -401,11 +401,9 @@ const FAN_H = CARDS.map((_, i) => ({
     x: fanStart + i * (CARD_W + GAP), y: 0,
 }));
 
-// Vertical fan (mobile) — fan downward
-const totalH   = CARD_H * CARDS.length + GAP * (CARDS.length - 1);
-const fanStartY = -totalH / 2 + CARD_H / 2;
+// Vertical fan (mobile) — fan downward from top
 const FAN_V = CARDS.map((_, i) => ({
-    x: 0, y: fanStartY + i * (CARD_H + GAP),
+    x: 0, y: i * (CARD_H + GAP),
 }));
 
 const ISO = CARDS.map((_, i) => ({
@@ -419,7 +417,7 @@ const ISO = CARDS.map((_, i) => ({
 const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
 const FAST_EASE_OUT: [number, number, number, number] = [0.4, 0, 1, 1];
 
-const MOBILE_BP = 768;
+const MOBILE_BP = 1024;
 
 type Stage = 'iso' | 'collapsing' | 'fan';
 
@@ -492,9 +490,7 @@ export const MorphingCards: React.FC = () => {
                     background:        'transparent',
                     perspective:       isMobile ? undefined : '2200px',
                     perspectiveOrigin: isMobile ? undefined : 'center center',
-                    overflowY:         isMobile ? 'scroll' : 'visible',
-                    overflowX:         'visible',
-                    height:            isMobile ? '500px' : 'auto',
+
                 }}>
                     <motion.div
                         className={isMobile ? styles.fanSceneVertical : styles.fanScene}

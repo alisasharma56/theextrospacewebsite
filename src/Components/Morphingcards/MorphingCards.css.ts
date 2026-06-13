@@ -377,6 +377,16 @@ export const sceneWrapper = style({
     overflow:       'visible',
     background:     'transparent',
 
+    '@media': {
+        'screen and (max-width: 1023px)': {
+            alignItems:     'flex-start',
+            justifyContent: 'center',
+            minHeight:      'calc(100svh - 200px)',
+        },
+    },
+
+
+
 
 });
 
@@ -410,6 +420,11 @@ export const fanScene = style({
             transform:       'scale(0.82)',
             transformOrigin: 'center center',
         },
+        'screen and (max-width: 1023px)': {
+            height: 'auto',
+            minHeight: '366px',
+            transform: 'none',
+        },
     },
 });
 
@@ -417,9 +432,9 @@ export const fanScene = style({
 export const fanSceneVertical = style({
     position:       'relative',
     width:          '100%',
-    height:         '100%',
+    height:         'calc(100svh - 200px)',
     display:        'flex',
-    alignItems:     'center',
+    alignItems:     'flex-start',
     justifyContent: 'center',
     transformStyle: 'preserve-3d',
     background:     'transparent',
