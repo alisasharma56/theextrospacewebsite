@@ -3,7 +3,7 @@ import { style } from '@vanilla-extract/css';
 export const gridWrapper = style({
     // 14" laptop — perfect, don't touch
     position: 'absolute',
-    bottom: -400,
+    bottom: -450,
     left: -10,
     right:-40,
     height: '64%',
@@ -13,9 +13,9 @@ export const gridWrapper = style({
 
     '@media': {
         'screen and (max-width: 1280px)': {
-            bottom: -450,
-            left:-150,
-            right:-200,
+            bottom: -500,
+            left:-300,
+            right:-600,
             height: '68%',
         },
 
