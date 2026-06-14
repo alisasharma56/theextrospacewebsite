@@ -4,19 +4,19 @@ export const gridWrapper = style({
     // 14" laptop — perfect, don't touch
     position: 'absolute',
     bottom: -400,
-    left: -300,
-    right: 10,
-    height: '75%',
+    left: -10,
+    right:-40,
+    height: '64%',
     zIndex: 1,
     pointerEvents: 'none',
     overflow: 'hidden',
 
     '@media': {
         'screen and (max-width: 1280px)': {
-            bottom: -320,
-            left: -210,
-            right: 40,
-            height: '75%',
+            bottom: -450,
+            left:-150,
+            right:-200,
+            height: '68%',
         },
 
         'screen and (max-width: 1024px)': {
