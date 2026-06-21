@@ -1,8 +1,7 @@
-
 import React from 'react';
 import { brackets, bracketColors } from './Cornerbrackets.css.ts';
 
-export type BracketColor = 'green' | 'cyan' | 'purple' | 'pink';
+export type BracketColor = 'green' | 'cyan' | 'purple' | 'pink' | 'white';
 
 interface CornerBracketsProps {
     color: BracketColor;
