@@ -30,8 +30,8 @@
 //     );
 // };
 
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
+
+import React, { useState } from 'react';
 import {
     heroWrapper, headerBlock, meetLabel,
     mainTitle, tagline, cardsArea,
@@ -40,9 +40,10 @@ import {
 import { MorphingCards } from '../Morphingcards';
 import GridBackground from '../GridBackground/GridBackground';
 import { CornerBrackets } from '../Cornerbrackets';
+import {ContactModal} from "../ContactModal/ConatactModal.tsx";
 
 export const HeroSection: React.FC = () => {
-    const navigate = useNavigate();
+    const [showContact, setShowContact] = useState(false);
 
     return (
         <div className={heroWrapper}>
@@ -61,8 +62,9 @@ export const HeroSection: React.FC = () => {
             </div>
 
             {/* Contact Us button */}
+            {/* Contact Us button */}
             <div className={contactWrapper}>
-                <button className={contactBtn} onClick={() => navigate('/contact')}>
+                <button className={contactBtn} onClick={() => setShowContact(true)}>
                     <CornerBrackets color='white' />
                     CONTACT US
                 </button>
@@ -70,6 +72,11 @@ export const HeroSection: React.FC = () => {
 
             {/* Grid sits at bottom of heroWrapper, behind cards */}
             <GridBackground />
+
+            {/* Contact modal */}
+            {showContact && <ContactModal onClose={() => setShowContact(false)} />}
+
+
         </div>
     );
 };

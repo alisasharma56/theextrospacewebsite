@@ -223,7 +223,7 @@ export const section = style({
 export const header = style({
     paddingTop:   '48px',
     marginBottom: '40px',
-    textAlign: 'center',
+    textAlign:    'center',
 });
 
 export const breadcrumb = style({
@@ -273,6 +273,7 @@ export const grid = style({
 });
 
 export const card = style({
+    cursor: 'pointer',
     position:             'relative',
     width:                '100%',
     height:               '360px',

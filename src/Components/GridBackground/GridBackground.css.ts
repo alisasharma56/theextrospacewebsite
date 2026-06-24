@@ -6,7 +6,7 @@ export const gridWrapper = style({
     bottom: -450,
     left: -10,
     right:-40,
-    height: '64%',
+    height: '67%',
     zIndex: 1,
     pointerEvents: 'none',
     overflow: 'hidden',
@@ -16,7 +16,7 @@ export const gridWrapper = style({
             bottom: -500,
             left:-300,
             right:-600,
-            height: '68%',
+            height: '67%',
         },
 
         'screen and (max-width: 1024px)': {
