@@ -48,13 +48,13 @@ export const HeroSection: React.FC = () => {
     return (
         <div className={heroWrapper}>
             <div className={headerBlock}>
-                <p className={meetLabel}>MEET</p>
+                <p className={meetLabel}>WE ARE</p>
                 <div className={titleRow}>
                     <span className={titleLine} />
                     <h1 className={mainTitle}>THEEXTROSPACE</h1>
                     <span className={titleLine} />
                 </div>
-                <p className={tagline}>THE FUTURE IS HERE</p>
+                <p className={tagline}>NOTHING HIDDEN.EVERYTHING BUILT</p>
             </div>
 
             <div className={cardsArea}>

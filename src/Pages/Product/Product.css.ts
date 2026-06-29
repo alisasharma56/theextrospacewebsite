@@ -23,6 +23,7 @@
 // export const header = style({
 //     paddingTop:   '48px',
 //     marginBottom: '40px',
+//     textAlign:    'center',
 // });
 //
 // export const breadcrumb = style({
@@ -71,56 +72,34 @@
 //     },
 // });
 //
-// export const cardWrapper = style({
-//     position: 'relative',
-//     width:    '100%',
-//     height:   '360px',
-//     cursor:   'pointer',
+// export const card = style({
+//     cursor: 'pointer',
+//     position:             'relative',
+//     width:                '100%',
+//     height:               '360px',
+//     display:              'flex',
+//     flexDirection:        'column',
+//     background:           'rgba(255,255,255,0.04)',
+//     backdropFilter:       'blur(10px) saturate(1.5) brightness(1.05)',
+//     WebkitBackdropFilter: 'blur(10px) saturate(1.5) brightness(1.05)',
+//     overflow:             'hidden',
 //
 //     '@media': {
 //         'screen and (max-width: 768px)': { height: '300px' },
 //     },
 // });
 //
-// export const flipInner = style({
-//     width:           '100%',
-//     height:          '100%',
-//     position:        'relative',
-//     transformStyle:  'preserve-3d',
-//     transformOrigin: 'center center',
-// });
-//
-// const baseFace = style({
-//     position:                 'absolute',
-//     inset:                     0,
-//     background:               'rgba(255,255,255,0.04)',
-//     backdropFilter:           'blur(10px) saturate(1.5) brightness(1.05)',
-//     WebkitBackdropFilter:     'blur(10px) saturate(1.5) brightness(1.05)',
-//     overflow:                 'hidden',
-//     display:                  'flex',
-//     flexDirection:            'column',
-//     backfaceVisibility:       'hidden',
-//     WebkitBackfaceVisibility: 'hidden',
-// });
-//
-// export const cardFront = style([baseFace]);
-// export const cardBack  = style([baseFace, {
-//     transform:      'rotateY(180deg)',
-//     justifyContent: 'flex-end',
-//     padding:        '28px 24px 32px',
-// }]);
-//
 // export const imageWrapper = style({
-//     flex:       1,
-//     overflow:   'hidden',
-//     margin:     '20px 20px 0',
+//     flex:     1,
+//     overflow: 'hidden',
+//     margin:   '20px 20px 0',
 // });
 //
 // export const image = style({
-//     width:     '100%',
-//     height:    '100%',
-//     objectFit: 'cover',
-//     display:   'block',
+//     width:      '100%',
+//     height:     '100%',
+//     objectFit:  'cover',
+//     display:    'block',
 //     background: 'rgba(255,255,255,0.06)',
 // });
 //
@@ -149,9 +128,9 @@
 // });
 //
 // export const tags = style({
-//     display:    'flex',
-//     flexWrap:   'wrap',
-//     gap:        '6px',
+//     display:  'flex',
+//     flexWrap: 'wrap',
+//     gap:      '6px',
 // });
 //
 // export const tag = style({
@@ -164,38 +143,6 @@
 //     border:        '1px solid rgba(255,255,255,0.15)',
 //     padding:       '3px 8px',
 //     borderRadius:  '2px',
-// });
-//
-// export const backContent = style({
-//     display:       'flex',
-//     flexDirection: 'column',
-//     gap:           '10px',
-// });
-//
-// export const backCategory = style({
-//     fontFamily:    '"Space Grotesk", sans-serif',
-//     fontSize:      '10px',
-//     letterSpacing: '3px',
-//     textTransform: 'uppercase',
-//     margin:         0,
-// });
-//
-// export const backName = style({
-//     fontFamily:    '"Space Grotesk", sans-serif',
-//     fontSize:      '24px',
-//     fontWeight:     700,
-//     letterSpacing: '-0.3px',
-//     color:         '#ffffff',
-//     margin:         0,
-// });
-//
-// export const backDesc = style({
-//     fontFamily: '"Space Grotesk", sans-serif',
-//     fontSize:   '12px',
-//     fontWeight:  300,
-//     lineHeight:  1.6,
-//     color:      'rgba(255,255,255,0.50)',
-//     margin:      0,
 // });
 
 import { style, globalStyle } from '@vanilla-extract/css';
@@ -222,7 +169,7 @@ export const section = style({
 
 export const header = style({
     paddingTop:   '48px',
-    marginBottom: '40px',
+    marginBottom: '32px',
     textAlign:    'center',
 });
 
@@ -236,7 +183,9 @@ export const breadcrumb = style({
 
 export const breadHome = style({
     color:      'rgba(255,255,255,0.35)',
-    fontWeight:  400,
+    cursor:     'pointer',
+    transition: 'color 0.2s',
+    ':hover':   { color: 'rgba(255,255,255,0.8)' },
 });
 
 export const breadSep = style({
@@ -251,17 +200,18 @@ export const breadCurrent = style({
 
 export const heading = style({
     fontFamily:    '"Space Grotesk", sans-serif',
-    fontSize:      '40px',
+    fontSize:      '36px',
     fontWeight:     700,
     color:         '#ffffff',
     margin:         0,
     letterSpacing: '-0.5px',
 
     '@media': {
-        'screen and (max-width: 768px)': { fontSize: '28px' },
+        'screen and (max-width: 768px)': { fontSize: '26px' },
     },
 });
 
+// 2-column grid matching screenshot
 export const grid = style({
     display:             'grid',
     gridTemplateColumns: 'repeat(2, 1fr)',
@@ -273,39 +223,39 @@ export const grid = style({
 });
 
 export const card = style({
-    cursor: 'pointer',
     position:             'relative',
     width:                '100%',
-    height:               '360px',
     display:              'flex',
     flexDirection:        'column',
     background:           'rgba(255,255,255,0.04)',
     backdropFilter:       'blur(10px) saturate(1.5) brightness(1.05)',
     WebkitBackdropFilter: 'blur(10px) saturate(1.5) brightness(1.05)',
     overflow:             'hidden',
-
-    '@media': {
-        'screen and (max-width: 768px)': { height: '300px' },
-    },
+    cursor:               'pointer',
+    transition:           'background 0.2s',
+    ':hover':             { background: 'rgba(255,255,255,0.07)' },
 });
 
 export const imageWrapper = style({
-    flex:     1,
-    overflow: 'hidden',
-    margin:   '20px 20px 0',
+    width:       '100%',
+    aspectRatio: '16 / 9',
+    overflow:    'hidden',
+    background:  'rgba(255,255,255,0.04)',
+    flexShrink:   0,
 });
 
 export const image = style({
-    width:      '100%',
-    height:     '100%',
-    objectFit:  'cover',
-    display:    'block',
-    background: 'rgba(255,255,255,0.06)',
+    width:     '100%',
+    height:    '100%',
+    objectFit: 'cover',
+    display:   'block',
 });
 
 export const info = style({
-    padding:   '14px 20px 20px',
-    flexShrink: 0,
+    padding: '20px 20px 24px',
+    display: 'flex',
+    flexDirection: 'column',
+    gap:     '8px',
 });
 
 export const name = style({
@@ -315,7 +265,7 @@ export const name = style({
     letterSpacing: '1.5px',
     textTransform: 'uppercase',
     color:         '#ffffff',
-    margin:        '0 0 6px',
+    margin:         0,
 });
 
 export const desc = style({
@@ -324,13 +274,14 @@ export const desc = style({
     fontWeight:  300,
     lineHeight:  1.6,
     color:      'rgba(255,255,255,0.45)',
-    margin:     '0 0 10px',
+    margin:      0,
 });
 
 export const tags = style({
-    display:  'flex',
-    flexWrap: 'wrap',
-    gap:      '6px',
+    display:   'flex',
+    flexWrap:  'wrap',
+    gap:       '6px',
+    marginTop: '4px',
 });
 
 export const tag = style({
@@ -343,4 +294,32 @@ export const tag = style({
     border:        '1px solid rgba(255,255,255,0.15)',
     padding:       '3px 8px',
     borderRadius:  '2px',
+});
+
+export const tagline = style({
+    fontFamily: '"Space Grotesk", sans-serif',
+    fontSize:   '12px',
+    fontStyle:  'italic',
+    color:      'rgba(255,255,255,0.55)',
+    margin:      0,
+});
+
+export const intro = style({
+    fontFamily:  '"Space Grotesk", sans-serif',
+    fontSize:    '13px',
+    lineHeight:   1.7,
+    color:       'rgba(255,255,255,0.45)',
+    textAlign:   'center',
+    maxWidth:    '500px',
+    margin:      '0 auto 32px',
+});
+
+export const eyebrow = style({
+    fontFamily:    '"Space Grotesk", sans-serif',
+    fontSize:      '11px',
+    letterSpacing: '5px',
+    textTransform: 'uppercase',
+    color:         '#8FF5FF',
+    opacity:        0.6,
+    marginBottom:  '8px',
 });

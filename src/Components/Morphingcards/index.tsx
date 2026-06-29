@@ -431,10 +431,10 @@ interface CardData {
 }
 
 const CARDS: CardData[] = [
-    { label: 'PEOPLE',  color: 'cyan',   hexColor: '#22d3ee', detail: 'Global Network Interconnected Via Neural-Sync Workflows.', stat: '12K+', statLabel: 'Active Members',    route: '/people'  },
-    { label: 'PRODUCT', color: 'green',  hexColor: '#4ade80', detail: 'High-Fidelity Artifacts Designed For The Digital Age.',   stat: '340+', statLabel: 'Shipped Products',   route: '/product' },
-    { label: 'PROCESS', color: 'pink',   hexColor: '#f472b6', detail: 'Systems That Scale. Workflows Built For Speed & Precision.', stat: '99%', statLabel: 'Delivery Rate',    route: '/process' },
-    { label: 'PROJECT', color: 'purple', hexColor: '#a855f7', detail: 'End-To-End Execution. From Concept To Launch.',           stat: '200+', statLabel: 'Projects Completed', route: '/project' },
+    { label: 'WHO BUILDS',  color: 'cyan',   hexColor: '#22d3ee', detail: "The people writing the code, fighting the deadlines, and refusing to ship anything they wouldn't use themselves.", stat: '12K+', statLabel: 'Active Members',    route: '/people'  },
+    { label: 'WHAT SHIPS', color: 'green',  hexColor: '#4ade80', detail: 'Three products, three different lives they\'re designed to fit into — built to be used, not just downloaded.',   stat: '340+', statLabel: 'Shipped Products',   route: '/product' },
+    { label: 'HOW IT RUNS', color: 'pink',   hexColor: '#f472b6', detail: ' A six-stage architecture behind every release. Not a slogan. An actual system.', stat: '99%', statLabel: 'Delivery Rate',    route: '/process' },
+    { label: 'WHERE IT LANDS', color: 'purple', hexColor: '#a855f7', detail: ' The market, the timing, the bet on who\'s waiting for this. The part that decides if any of the rest mattered.',           stat: '200+', statLabel: 'Projects Completed', route: '/project' },
 ];
 
 const CARD_COLOR: Record<string, string> = {

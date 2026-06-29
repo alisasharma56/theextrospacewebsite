@@ -171,7 +171,7 @@ export const frontContent = style({
 export const frontLabel = style({
     fontFamily:    '"Space Grotesk", sans-serif',
     fontWeight:     700,
-    fontSize:      '40px',
+    fontSize:      '30px',
     lineHeight:    'normal',
     letterSpacing: '-0.9px',
     textTransform: 'uppercase',
