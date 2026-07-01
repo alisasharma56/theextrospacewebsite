@@ -30,8 +30,8 @@ export const modal = style({
 
 export const closeBtn = style({
     position:   'absolute',
-    top:        '20px',
-    right:      '20px',
+    top:        '30px',
+    right:      '30px',
     background: 'transparent',
     border:     'none',
     color:      'rgba(255,255,255,0.50)',
@@ -45,23 +45,22 @@ export const closeBtn = style({
 
 export const title = style({
     fontFamily:    '"Space Grotesk", sans-serif',
-    fontSize:      '28px',
-    fontWeight:     700,
+    fontSize:      '24px',
+    fontWeight:     600,
     letterSpacing: '3px',
     textTransform: 'uppercase',
-    color:         '#ffffff',
+    color:         '#FFFFFFE5',
     textAlign:     'center',
     margin:        '0 0 8px',
 });
 
 export const subtitle = style({
     fontFamily:    '"Space Grotesk", sans-serif',
-    fontSize:      '11px',
+    fontSize:      '12px',
     fontWeight:     300,
     letterSpacing: '5px',
     textTransform: 'uppercase',
-    color:         '#8FF5FF',
-    opacity:        0.7,
+    color:         '#8E95A2',
     textAlign:     'center',
     margin:        '0 0 36px',
 });
@@ -79,8 +78,8 @@ export const field = style({
 });
 
 export const label = style({
-    fontFamily:    '"Space Grotesk", sans-serif',
-    fontSize:      '12px',
+    fontFamily:  '"Asap Condensed", sans-serif',
+    fontSize:      '14px',
     fontWeight:     400,
     color:         'rgba(255,255,255,0.60)',
     letterSpacing: '0.5px',
@@ -91,8 +90,8 @@ export const input = style({
     border:       '1px solid rgba(255,255,255,0.10)',
     outline:      'none',
     color:        '#ffffff',
-    fontFamily:   '"Space Grotesk", sans-serif',
-    fontSize:     '13px',
+    fontFamily:  '"Asap Condensed", sans-serif',
+    fontSize:     '14px',
     padding:      '14px 16px',
     width:        '100%',
     boxSizing:    'border-box',
@@ -107,8 +106,8 @@ export const textarea = style({
     border:       '1px solid rgba(255,255,255,0.10)',
     outline:      'none',
     color:        '#ffffff',
-    fontFamily:   '"Space Grotesk", sans-serif',
-    fontSize:     '13px',
+    fontFamily:  '"Asap Condensed", sans-serif',
+    fontSize:     '14px',
     padding:      '14px 16px',
     width:        '100%',
     boxSizing:    'border-box',
@@ -121,19 +120,17 @@ export const textarea = style({
 });
 
 export const submitBtn = style({
-    background:    'rgba(255,255,255,0.08)',
-    border:        '1px solid rgba(255,255,255,0.15)',
-    color:         '#ffffff',
+    display:       'block',
+    width:         'fit-content',
+    margin:        '0 auto 48px',
     fontFamily:    '"Space Grotesk", sans-serif',
-    fontSize:      '13px',
-    fontWeight:     600,
-    letterSpacing: '3px',
+    fontSize:      '14px',
+    fontWeight:     700,
     textTransform: 'uppercase',
-    padding:       '18px',
-    width:         '100%',
+    color:         '#25272C',
+    background:    '#F7F8F8',
+    border:        '1px solid rgba(255,255,255,0.20)',
+    padding:       '12px 32px',
+    textDecoration: 'none',
     cursor:        'pointer',
-    transition:    'background 0.2s',
-    marginTop:     '4px',
-
-    ':hover': { background: 'rgba(255,255,255,0.14)' },
 });
