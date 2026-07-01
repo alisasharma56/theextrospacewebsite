@@ -62,32 +62,36 @@ export const tags = style({
 
 export const tag = style({
     fontFamily:    '"Space Grotesk", sans-serif',
-    fontSize:      '10px',
-    letterSpacing: '1.5px',
+    fontSize:      '12px',
+    fontWeight:     300,
+    letterSpacing: '0.5px',
     textTransform: 'uppercase',
-    color:         'rgba(255,255,255,0.55)',
-    border:        '1px solid rgba(255,255,255,0.18)',
-    padding:       '4px 12px',
-    borderRadius:  '2px',
+    color:         'rgba(255,255,255,0.60)',
+    background:    '#25272C',
+    border:        '1px solid #40444C',
+    padding:       '3px 8px',
+    height:        '24px',
+    display:       'flex',
+    alignItems:    'center',
+    boxSizing:     'border-box',
+    gap:           '10px',
 });
-
 export const liveBtn = style({
     display:       'block',
     width:         'fit-content',
     margin:        '0 auto 48px',
     fontFamily:    '"Space Grotesk", sans-serif',
-    fontSize:      '12px',
-    fontWeight:     600,
-    letterSpacing: '2px',
+    fontSize:      '14px',
+    fontWeight:     700,
     textTransform: 'uppercase',
-    color:         '#ffffff',
-    background:    'rgba(255,255,255,0.08)',
+    color:         '#25272C',
+    background:    '#F7F8F8',
     border:        '1px solid rgba(255,255,255,0.20)',
     padding:       '12px 32px',
     textDecoration: 'none',
     cursor:        'pointer',
-    transition:    'background 0.2s',
-    ':hover':      { background: 'rgba(255,255,255,0.14)' },
+
+
 });
 
 export const sections = style({
@@ -104,22 +108,32 @@ export const section = style({
 
 export const sectionTitle = style({
     fontFamily:    '"Space Grotesk", sans-serif',
-    fontSize:      '14px',
-    fontWeight:     700,
+    fontSize:      '20px',
+    fontWeight:     600,
     letterSpacing: '2px',
     textTransform: 'uppercase',
     color:         '#ffffff',
     margin:         0,
 });
 
-export const sectionText = style({
-    fontFamily: '"Space Grotesk", sans-serif',
-    fontSize:   '13px',
-    fontWeight:  300,
-    lineHeight:  1.8,
-    color:      'rgba(255,255,255,0.55)',
+// export const sectionText = style({
+//     fontFamily: '"Space Grotesk", sans-serif',
+//     fontSize:   '13px',
+//     fontWeight:  300,
+//     lineHeight:  1.8,
+//     color:      'rgba(255,255,255,0.55)',
+//     margin:      0,
+// });
+export const  sectionText = style({
+    // fontFamily: '"Space Grotesk", sans-serif',
+    fontFamily:  '"Asap Condensed", sans-serif',
+    fontSize:   '12px',
+    fontWeight:  400,
+    lineHeight:  '24px',
+    color:      '#8E95A2',
     margin:      0,
 });
+
 
 export const sectionImage = style({
     width:        '100%',

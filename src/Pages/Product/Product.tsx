@@ -117,7 +117,6 @@ export const Product: React.FC = () => {
                     <span className={styles.breadSep}> / </span>
                     <span className={styles.breadCurrent}>PRODUCT</span>
                 </p>
-                <p className={styles.eyebrow}>WHAT SHIPS</p>
                 <h1 className={styles.heading}>Our Productt</h1>
                 <p className={styles.intro}>Three products. Three completely different corners of someone's life. Built with the same standard, none of them built the same way.</p>
             </div>

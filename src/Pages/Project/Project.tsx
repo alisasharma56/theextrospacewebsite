@@ -287,7 +287,6 @@ export const Project: React.FC = () => {
                     <span className={styles.breadSep}> / </span>
                     <span className={styles.breadCurrent}>PROJECT</span>
                 </p>
-                <p className={styles.eyebrow}>THE PROJECTS</p>
                 <h1 className={styles.heading}>Our Project</h1>
             </div>
 
@@ -315,7 +314,6 @@ export const Project: React.FC = () => {
                                 <CornerBrackets color='white' />
                                 <span className={styles.thumbPlaceholder}>⊘</span>
                             </div>
-                            <p className={styles.emptyEyebrow}>WHERE IT LANDS</p>
                             <h2 className={styles.noSelection}>NO PROJECT SELECTED</h2>
                             <p className={styles.detailText}>Most studios tell you what they built, then separately tell you how it sold, like two different teams wrote two different press releases. We don't have that problem, because we don't run it that way. Every project on the left has been developed, marketed, and deployed as one continuous motion — the same people, the same sprints, the same arguments, happening in parallel instead of in sequence.</p>
                             <p className={styles.detailText}>Pick a project. What you'll find on the other side isn't a feature list and a separate launch recap. It's the actual journey — where engineering and go-to-market collided, what changed because of it, and what real people said once it was in their hands.</p>

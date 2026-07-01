@@ -336,10 +336,10 @@ export const sidebar = style({
 });
 
 export const sidebarLabel = style({
-    fontFamily:    '"Space Grotesk", sans-serif',
-    fontSize:      '10px',
+    fontFamily:    '"Asap Condensed", sans-serif',
+    fontSize:      '14px',
     letterSpacing: '3px',
-    color:         'rgba(255,255,255,0.30)',
+    color:         '#5B616E',
     marginBottom:  '10px',
     textTransform: 'uppercase',
 });
@@ -350,10 +350,9 @@ export const projectBtn = style({
     outline:       'none',
     textAlign:     'left',
     fontFamily:    '"Space Grotesk", sans-serif',
-    fontSize:      '12px',
+    fontSize:      '14px',
     fontWeight:     500,
-    letterSpacing: '1px',
-    color:         'rgba(255,255,255,0.45)',
+    color:         '#FFFFFF99',
     padding:       '10px 12px',
     cursor:        'pointer',
     transition:    'color 0.2s, background 0.2s',
@@ -394,19 +393,12 @@ export const thumbPlaceholder = style({
     color:    'rgba(255,255,255,0.20)',
 });
 
-export const emptyEyebrow = style({
-    fontFamily:    '"Space Grotesk", sans-serif',
-    fontSize:      '10px',
-    letterSpacing: '4px',
-    textTransform: 'uppercase',
-    color:         'rgba(255,255,255,0.30)',
-    margin:         0,
-});
+
 
 export const noSelection = style({
     fontFamily:    '"Space Grotesk", sans-serif',
-    fontSize:      '16px',
-    fontWeight:     700,
+    fontSize:      '20px',
+    fontWeight:     600,
     letterSpacing: '2px',
     textTransform: 'uppercase',
     color:         '#ffffff',
@@ -444,8 +436,8 @@ export const section = style({
 
 export const sectionTitle = style({
     fontFamily:    '"Space Grotesk", sans-serif',
-    fontSize:      '12px',
-    fontWeight:     700,
+    fontSize:      '20px',
+    fontWeight:     600,
     letterSpacing: '2px',
     textTransform: 'uppercase',
     color:         '#ffffff',
@@ -453,10 +445,10 @@ export const sectionTitle = style({
 });
 
 export const detailText = style({
-    fontFamily: '"Space Grotesk", sans-serif',
-    fontSize:   '13px',
-    fontWeight:  300,
-    lineHeight:  1.8,
-    color:      'rgba(255,255,255,0.55)',
+    fontFamily:  '"Asap Condensed", sans-serif',
+    fontSize:   '12px',
+    fontWeight:  400,
+    lineHeight:  '24px',
+    color:      '#8E95A2',
     margin:      0,
 });

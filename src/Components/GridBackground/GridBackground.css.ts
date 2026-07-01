@@ -13,10 +13,10 @@ export const gridWrapper = style({
 
     '@media': {
         'screen and (max-width: 1280px)': {
-            bottom: -500,
-            left:-300,
-            right:-600,
-            height: '67%',
+            bottom:-520,
+            left:-1200,
+            right:-1500,
+            height: '70%',
         },
 
         'screen and (max-width: 1024px)': {
